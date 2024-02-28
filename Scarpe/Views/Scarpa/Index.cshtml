@@ -1,0 +1,28 @@
+﻿@model List<Scarpe.Models.Scarpa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vetrina</h2>
+
+<div class="row">
+
+    @foreach (Scarpe.Models.Scarpa s in Model)
+    {
+        <div class="col-4">
+            <div class="card">
+                <img src="@s.ImgCopertina" class="card-img-top" alt="@s.Nome">
+                <div class="card-body">
+                    <h5 class="card-title">@s.Nome</h5>
+                    <p class="card-text">@s.Prezzo</p>
+                    <a href="Scarpa/Dettagli/IDProdotto= + id" class="btn btn-primary">Dettagli</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+
